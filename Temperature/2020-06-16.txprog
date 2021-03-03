@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tx:program tx:quality="Default" tx:name="2020-06-16" xsi:schemaLocation="http://www.tx16wx.com/3.0/ program"
+   tx:created-by="30100" xmlns:tx="http://www.tx16wx.com/3.0/program"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <tx:wave tx:id="1" tx:path="2020-06-16_33_A2.wav" tx:root="A2">
+      <tx:loop tx:name="1" tx:end="872" tx:mode="Forward" tx:start="0"/>
+   </tx:wave>
+   <tx:bounds tx:high-vel="127" tx:low-key="C-1" tx:high-key="G9" tx:low-vel="0"/>
+   <tx:soundshape tx:id="4dc57be6-dcce-439d-8430-00142a4dd899" tx:name="BPF-AEG" tx:pan="0%" tx:pwm="0%" tx:volume="0 dB"
+      tx:glide-mode="Held">
+      <tx:aeg tx:decay2-shape="-50%" tx:decay2="300ms" tx:attack-shape="-50%" tx:attack="10.0ms" tx:decay1-shape="-50%"
+         tx:decay1="500ms" tx:release="150ms" tx:release-shape="-50%" tx:level1="0 dB" tx:level2="0 dB" tx:sustain="0 dB"/>
+      <tx:filter1 tx:type="LowPass" tx:cutoff="20kHz" tx:resonance="0%" tx:drive="0%" tx:slope="24dB"/>
+      <tx:filter2 tx:type="HighPass" tx:cutoff="20Hz" tx:resonance="0%" tx:drive="0%" tx:slope="12dB"/>
+      <tx:send tx:level="0 dB"/>
+      <tx:send tx:level="0 dB"/>
+      <tx:send tx:level="0 dB"/>
+      <tx:modulation/>
+   </tx:soundshape>
+   <tx:group tx:name="Group" tx:volume="0 dB" tx:pan="0%" tx:coarse="0" tx:fine="0" tx:playmode="Normal"
+      tx:polymode="Poly" tx:playback="Resample" tx:noteprio="Last" tx:scale="100" tx:choke-group="0" tx:output="--"
+      tx:quality="Default" tx:color="forestgreen" tx:soundshape="4dc57be6-dcce-439d-8430-00142a4dd899">
+      <tx:region tx:mode="RAM" tx:attenuation="-3 dB" tx:pan="0%" tx:loop="1" tx:release="1" tx:wave="1">
+         <tx:bounds tx:high-vel="127" tx:low-key="C-1" tx:low-vel="0" tx:high-key="G9"/>
+      </tx:region>
+   </tx:group>
+</tx:program>
