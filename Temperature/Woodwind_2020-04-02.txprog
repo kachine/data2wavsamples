@@ -8,19 +8,30 @@
    <tx:bounds tx:high-vel="127" tx:low-key="C-1" tx:high-key="G9" tx:low-vel="0"/>
    <tx:soundshape tx:id="d60ceca1-955e-4e2b-b569-ceab2aa69bc2" tx:name="BPF-AEG" tx:pan="0%" tx:pwm="0%" tx:volume="0 dB"
       tx:glide-mode="Held">
-      <tx:aeg tx:decay2-shape="-50%" tx:decay2="300ms" tx:attack-shape="-50%" tx:attack="10.0ms" tx:decay1-shape="-50%"
-         tx:decay1="500ms" tx:release="150ms" tx:release-shape="-50%" tx:level1="0 dB" tx:level2="0 dB" tx:sustain="0 dB"/>
-      <tx:filter1 tx:type="LowPass" tx:cutoff="20kHz" tx:resonance="0%" tx:drive="0%" tx:slope="24dB"/>
+      <tx:aeg tx:decay2-shape="-100%" tx:decay2="2s" tx:attack-shape="-50%" tx:attack="5.0ms" tx:decay1-shape="-50%"
+         tx:decay1="0ms" tx:release="150ms" tx:release-shape="-50%" tx:level1="0 dB" tx:level2="0 dB" tx:sustain="-6 dB"/>
+      <tx:lfo1 tx:rate="3.5Hz" tx:fade-in="300ms" tx:beat="1/16" tx:mode="Normal" tx:sync="Key" tx:pos="0%" tx:amp="40%"
+         tx:type="Sinus"/>
+      <tx:filter1 tx:type="LowPass" tx:cutoff="2.03kHz" tx:resonance="66%" tx:drive="0%" tx:slope="24dB"/>
       <tx:filter2 tx:type="HighPass" tx:cutoff="20Hz" tx:resonance="0%" tx:drive="0%" tx:slope="12dB"/>
       <tx:send tx:level="0 dB"/>
       <tx:send tx:level="0 dB"/>
       <tx:send tx:level="0 dB"/>
-      <tx:modulation/>
+      <tx:modulation>
+         <tx:entry tx:source="Key" tx:destination="Filter 1 Freq" tx:amount="1600Ct">
+            <tx:src-curve tx:smooth="true" tx:shape="Linear"/>
+            <tx:via-curve tx:smooth="true" tx:shape="Linear"/>
+         </tx:entry>
+         <tx:entry tx:source="LFO1" tx:destination="Pitch" tx:amount="5Ct">
+            <tx:src-curve tx:smooth="true" tx:shape="Linear"/>
+            <tx:via-curve tx:smooth="true" tx:shape="Linear"/>
+         </tx:entry>
+      </tx:modulation>
    </tx:soundshape>
    <tx:group tx:name="Group" tx:volume="0 dB" tx:pan="0%" tx:coarse="0" tx:fine="0" tx:playmode="Normal"
       tx:polymode="Poly" tx:playback="Resample" tx:noteprio="Last" tx:scale="100" tx:choke-group="0" tx:output="--"
       tx:quality="Default" tx:color="forestgreen" tx:soundshape="d60ceca1-955e-4e2b-b569-ceab2aa69bc2">
-      <tx:region tx:mode="RAM" tx:attenuation="-3 dB" tx:pan="0%" tx:loop="1" tx:release="1" tx:wave="1">
+      <tx:region tx:mode="RAM" tx:attenuation="-3 dB" tx:pan="0%" tx:loop="0" tx:release="0" tx:wave="1">
          <tx:bounds tx:high-vel="127" tx:low-key="C-1" tx:low-vel="0" tx:high-key="G9"/>
       </tx:region>
    </tx:group>
