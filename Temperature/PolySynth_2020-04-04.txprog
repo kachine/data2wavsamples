@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tx:program tx:quality="Default" tx:name="2020-04-04" xsi:schemaLocation="http://www.tx16wx.com/3.0/ program"
+   tx:created-by="30100" xmlns:tx="http://www.tx16wx.com/3.0/program"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <tx:wave tx:id="1" tx:path="2020-04-04_33_A2.wav" tx:root="A2">
+      <tx:loop tx:name="1" tx:end="872" tx:mode="Forward" tx:start="0"/>
+   </tx:wave>
+   <tx:bounds tx:high-vel="127" tx:low-key="C-1" tx:high-key="G9" tx:low-vel="0"/>
+   <tx:soundshape tx:id="e320b190-144f-4eaf-ae80-640e56927edc" tx:name="BPF-AEG" tx:pan="0%" tx:pwm="0%" tx:volume="0 dB"
+      tx:glide-mode="Held">
+      <tx:aeg tx:decay2-shape="-50%" tx:decay2="2s" tx:attack-shape="-50%" tx:attack="3.5ms" tx:decay1-shape="-50%"
+         tx:decay1="0ms" tx:release="200ms" tx:release-shape="-50%" tx:level1="0 dB" tx:level2="0 dB" tx:sustain="-6 dB"/>
+      <tx:lfo1 tx:rate="5.5Hz" tx:fade-in="600ms" tx:beat="1/16" tx:mode="Normal" tx:sync="Key" tx:pos="0%" tx:amp="50%"
+         tx:type="Triangle"/>
+      <tx:filter1 tx:type="LowPass" tx:cutoff="1.35kHz" tx:resonance="33%" tx:drive="0%" tx:slope="12dB"/>
+      <tx:filter2 tx:type="HighPass" tx:cutoff="120Hz" tx:resonance="0%" tx:drive="0%" tx:slope="12dB"/>
+      <tx:send tx:level="0 dB"/>
+      <tx:send tx:level="0 dB"/>
+      <tx:send tx:level="0 dB"/>
+      <tx:modulation>
+         <tx:entry tx:source="AEG" tx:destination="Filter 1 Freq" tx:amount="1200Ct">
+            <tx:src-curve tx:smooth="true" tx:shape="Linear"/>
+            <tx:via-curve tx:smooth="true" tx:shape="Linear"/>
+         </tx:entry>
+         <tx:entry tx:source="Key" tx:destination="Filter 1 Freq" tx:amount="350Ct">
+            <tx:src-curve tx:smooth="true" tx:shape="Linear"/>
+            <tx:via-curve tx:smooth="true" tx:shape="Linear"/>
+         </tx:entry>
+         <tx:entry tx:source="LFO1" tx:destination="Pitch" tx:amount="10Ct">
+            <tx:src-curve tx:smooth="true" tx:shape="Linear"/>
+            <tx:via-curve tx:smooth="true" tx:shape="Linear"/>
+         </tx:entry>
+      </tx:modulation>
+   </tx:soundshape>
+   <tx:group tx:name="Group" tx:volume="0 dB" tx:pan="0%" tx:coarse="0" tx:fine="0" tx:playmode="Normal"
+      tx:polymode="Poly" tx:playback="Resample" tx:noteprio="Last" tx:scale="100" tx:choke-group="0" tx:output="--"
+      tx:quality="Default" tx:color="forestgreen" tx:soundshape="e320b190-144f-4eaf-ae80-640e56927edc">
+      <tx:region tx:mode="RAM" tx:attenuation="-3 dB" tx:pan="0%" tx:loop="0" tx:release="0" tx:wave="1">
+         <tx:bounds tx:high-vel="127" tx:low-key="C-1" tx:low-vel="0" tx:high-key="G9"/>
+      </tx:region>
+   </tx:group>
+</tx:program>
